@@ -15,6 +15,28 @@ html {
     font-style: normal;
 }
 
+a{
+    text-decoration: none;
+
+    font-size: 1.3em;
+
+    color:#333;
+}
+
+a:visited{
+    color:#333;
+}
+
+a:hover{
+    text-decoration: underline;
+
+    color:#666;
+}
+
+a:active{
+    color:#666;
+}
+
 .header {
     float: left;
     width: 100%;
@@ -115,18 +137,19 @@ html {
     font-weight: 500;
 
     float:left;
+
 }
 
 .splash-subdescription{
-    font-size: .6em;
+    font-size: .8em;
 
     color:#555;
 
     font-weight: 300;
 
-    font-size: xx-large;
-
     float:left;
+
+    margin: .5em 0;
 }
 
 .splash-img{
@@ -141,13 +164,14 @@ html {
 
 .graphs{
     margin:auto;
+
     margin-bottom: 4.5em;
 
     width:75%;
 
     clear:both;
 
-    padding-top:3em;
+    padding-top:1.5em;
 
     position: relative;
 

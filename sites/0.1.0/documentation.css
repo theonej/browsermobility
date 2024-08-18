@@ -1,0 +1,26 @@
+.documentation{
+    font-size: 1em;;
+}
+
+.documentation-content {
+    margin: auto;
+    width: 75%;
+    clear: both;
+    position: relative;
+    
+    padding-bottom: 1.5em;
+}
+
+.documentation-content p{
+    font-size: 1.5em;
+}
+
+.documentation-content a{
+    text-decoration: underline;
+    font-size: 1.1em;
+}
+
+
+.documentation .footer{
+    font-size: 1em;
+}
