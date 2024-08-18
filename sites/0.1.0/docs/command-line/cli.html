@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="../../styles.css">
+    <link type="text/css" rel="stylesheet" href="../../documentation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="content">
+        <div class="header">
+            <a href='/'>
+                <img src="../../img/logo.png">
+            </a>
+
+            <div class="header-menu">
+                <ul>
+                    <li><a href='/'>About</a></li>
+                    <li><a href='/docs'>Docs</a></li>
+                    <li><a href='/how-to'>How To</a></li>
+                    <li><a href='/support'>Support</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="documentation">
+
+            <div class="documentation-content">
+                <h2>Gluon CLI</h2>
+                <p>
+                    BrowserMobility is powered by Gluon, an API first distributed hypervisor for managing iOS
+                    simulators.
+                    The main interface to the Gluon APIs is the gluon-cli command line tool.
+                </p>
+
+                <h3>Installation</h3>
+                <p>
+                    To install the gluon-cli, run this command in a terminal on MacOS:
+
+                <pre>
+                        npm i -g @jhenrycode/gluon-cli
+                    </pre>
+                </p>
+                <p>
+                    After installation, run <code>gluon-cli</code> to ensure the command line tools were installed
+                    correctly.
+                </p>
+
+                <h3>Credentials</h3>
+                <p>
+                    Setting credentials for the gluon CLI can be done by calling the <code>set-credentials</code>
+                    command on the CLI.
+                    The effect of executing this command is to write the provided glon API key to a file which can be
+                    found at ~/.gluon/config.
+                </p>
+                <p>
+                    Alternately, you can set an environment variable called GLUON_API_KEY with the value of your account
+                    api key. When both the <code>GLUON_API_KEY</code> environment variable and the
+                    <code>~/.gluon/config</code> are both set, the environment vaariable will be used.
+                </p>
+
+                <h3>Commands</h3>
+
+                <ul>
+                    <li><a href="#account-info">account-info</a></li>
+                    <li><a href='#hosts'>hosts</a></li>
+                    <li>host-simulators</li>
+                    <li>available-simulators</li>
+                    <li>create-simulator</li>
+                    <li>delete-simulator</li>
+                    <li>host-logs</li>
+                    <li>host-runtimes</li>
+                    <li>account-sessions</li>
+                    <li>session-video-url</li>
+                    <li>povision-host</li>
+                    <li>set-credentials</li>
+                    <li>run-sample-test</li>
+                </ul>
+
+                <div class="command-item">
+
+                    <p>
+                    <h3><a id="account-info">account-info</a></h3>
+                    <div>
+                        Retrieves top-level account information for the configured account. The account information is
+                        returned in json format with the following fields:
+                        <pre>
+                                {
+                                    id,
+                                    name,
+                                    adminAccountEmail,
+                                    publicKey
+                                }
+                        </pre>
+
+                        The <code>publicKey</code> is the public part of the RSA keypair used to sign all commands
+                        executed against the Gluon APIs. Gluon is a <a
+                            href='https://www.cloudflare.com/learning/security/glossary/what-is-zero-trust/'
+                            target="_blank">Zero Trust environment</a>, and as such all API requests must be signed and
+                        validated.
+                    </div>
+                    </p>
+                </div>
+
+                <div class="command-item">
+
+                    <p>
+                    <h3><a id="hosts">hosts</a></h3>
+                    <div>
+                        Retrieves registered host information for the configured account. The host information is
+                        returned in json format with the following fields:
+                        <pre>
+                                {
+                                    id,
+                                    accountId,
+                                    machineIp,
+                                    hostType,
+                                    ipAddress,
+                                    commandPort,
+                                    agentPort,
+                                    simulatorCount,
+                                    maxSimulatorCount,
+                                    lastHeartBeat,
+                                    created,
+                                    updated
+                                }
+                        </pre>
+                        <p>
+                            The machine IP is the IP of the base-level host. This is usually the IP address of the
+                            physical machine, but could be the IP address of a Virtual Machine that is acting as the
+                            hypervisor layer in a nested virtualization environment.
+                        </p>
+                        <p>
+                            The host type will be an enumerated value with the following values:
+                        <ul>
+                            <li>1 - AWS</li>
+                            <li>2 - MacStadium</li>
+                            <li>3 - OnPrem (self hosted)</li>
+                        </ul>
+                        </p>
+                    </div>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="integrations-content">
+
+
+            <div class="footer">
+                <div class="footer-menu">
+                    <ul>
+                        <li>Terms of Service</li>
+                        <li>Privacy</li>
+                        <li>Legal</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>

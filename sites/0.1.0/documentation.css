@@ -24,3 +24,39 @@
 .documentation .footer{
     font-size: 1em;
 }
+
+.documentation-content li{
+    font-size: 1.2em;
+    padding:.4em;
+}
+
+.documentation-content li a{
+    text-decoration: none;
+}
+
+.documentation-content li a:hover{
+    text-decoration: underline;
+}
+
+.documentation-content .command-item{
+
+    padding:.5em;
+
+    border-radius: 2px;
+}
+
+.documentation-content .command-item h3{
+    color:#666;
+
+    border-bottom:solid 1px #666;
+
+    display:inline-block;
+}
+
+.documentation-content .command-item p{
+    font-size: 1em;
+}
+
+.documentation-content .command-item li{
+    font-size: 1em;
+}

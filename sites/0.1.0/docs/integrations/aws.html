@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <link type="text/css" rel="stylesheet" href="../styles.css">
-    <link type="text/css" rel="stylesheet" href="../documentation.css">
+    <link type="text/css" rel="stylesheet" href="../../styles.css">
+    <link type="text/css" rel="stylesheet" href="../../documentation.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -22,7 +22,7 @@
     <div class="content">
         <div class="header">
             <a href='/'>
-                <img src="../img/logo.png">
+                <img src="../../img/logo.png">
             </a>
 
             <div class="header-menu">
@@ -38,20 +38,21 @@
         <div class="documentation">
             <div class="documentation-content">
                 <div>
-                    <span><a href='/integrations/datadog'><img
-                                src="../img/assets/400c25a-small-MacStadium_Logo.png"></a></span>
+                    <span><a href='/docs/integrations/aws'><img src="../../img/assets/aws.png"></a></span>
                 </div>
 
                 <h2>
-                    MacStadium Integration
+                    AWS Integration
                 </h2>
                 <p>
-                    BrowserMobility integrates natively with MacStadium, enabling you to use your MacStadium
+                    BrowserMobility integrates natively with AWS, enabling you to use your AWS Mac
                     infrastructure to host your simulators.
                 </p>
                 <p>
-                    Using your <a href='https://portal.macstadium.com/' target="_blank">existing MacStadium account</a>,
-                    use the IP address and credentials of the Host(s) you want to register your simulators on.
+                    Using your <a href='https://us-east-1.console.aws.amazon.com/' target="_blank">existing AWS
+                        account</a>,
+                    you can register your AWS Access Key and Secret to register AWS Mac Metal hosts for your
+                    BrowserMobility simulators
                 </p>
                 <p></p>
             </div>
@@ -66,20 +67,27 @@
                         up for an account.</a>
                 </p>
                 <p>
-                    Once you have an account, <a href="https://app.browsermobility.com/integrations/macstadium"
+                    Once you have an account, <a href="https://app.browsermobility.com/integrations/aws"
                         target="_blank">go to
-                        the MacStadium integration</a> and configure your MacStadium IP Address and credentials for each
-                    host you want to run simulators on.
+                        the AWS integration</a> and configure your AWS Access key and Secret.
+
+                    Your credentials are stored in an industry-leading secrets management system, ensuring your api keys
+                    will never be exposed or compromised.
                 </p>
                 <p>
-                    NOTE: If you have locked down your firewall to limit inbound traffic, you will need to allowlist our
+                    Once your access key and secret are registered, you can then register hosts in BrowserMobility,
+                    which will allocate Mac Metal instances in AWS to host your simulators.
+                    Each host allocated in AWS must be allocated for a minimum of 24 hours.
+                </p>
+                <p>
+                    <b>NOTE:</b> If you have locked down your firewall to limit inbound traffic, you will need to allowlist our
                     <a href="https://app.browsermobility.com/config/ip-list" target="_blank">list of IP addresses of our
                         NAT servers</a>
-                    to allow inboud connections between our servers and your MacStadium infrastructure.
+                    to allow inboud connections between our servers and your AWS infrastructure.
                 </p>
                 <p>
-                    Once you have registered your MacStadium infrastructure as hosts in our system, you can <a
-                        href="'/documentation/cli.html" target="_blank">use the Gluon CLI</a> to interact
+                    Once you have registered your AWS infrastructure as hosts in our system, you can <a
+                        href="/docs/command-line/cli.html" target="_blank">use the Gluon CLI</a> to interact
                     with your hosts and create simulators that match the configuration you want to use.
                 </p>
                 <p></p>
@@ -91,6 +99,9 @@
                     If you have any issues setting up your account, <a href="/support">Contact us Here</a> for support.
                 </p>
             </div>
+
+        </div>
+        <div class="integrations-content">
             <div class="footer">
                 <div class="footer-menu">
                     <ul>

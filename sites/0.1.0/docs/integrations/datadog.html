@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <link type="text/css" rel="stylesheet" href="../styles.css">
-    <link type="text/css" rel="stylesheet" href="../documentation.css">
+    <link type="text/css" rel="stylesheet" href="../../styles.css">
+    <link type="text/css" rel="stylesheet" href="../../documentation.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -22,7 +22,7 @@
     <div class="content">
         <div class="header">
             <a href='/'>
-                <img src="../img/logo.png">
+                <img src="../../img/logo.png">
             </a>
 
             <div class="header-menu">
@@ -38,7 +38,7 @@
         <div class="documentation">
             <div class="documentation-content">
                 <div>
-                    <span><a href='/integrations/datadog'><img src="../img/assets/dd_horizontal_light.avif"></a></span>
+                    <span><a href='/docs/integrations/datadog'><img src="../../img/assets/dd_horizontal_light.avif"></a></span>
                 </div>
 
                 <h2>
@@ -49,7 +49,8 @@
                     Datadog on iOS simulators.
                 </p>
                 <p>
-                    We use the <a href='https://docs.datadoghq.com/api/latest/synthetics/' target="_blank">Datadog synthetics APIs</a>
+                    We use the <a href='https://docs.datadoghq.com/api/latest/synthetics/' target="_blank">Datadog
+                        synthetics APIs</a>
                     to fetch your synthetic test configurations, ensuring the synthetics are always in sync with what
                     you are running in Datadog.
                 </p>
@@ -62,11 +63,13 @@
             <div class="documentation-content">
                 <h2>Setting up the Integration</h2>
                 <p>
-                    If you don't already have an account, <a href='https://app.browsermobility.com/account/sign-up' target="_blank">sign
+                    If you don't already have an account, <a href='https://app.browsermobility.com/account/sign-up'
+                        target="_blank">sign
                         up for an account.</a>
                 </p>
                 <p>
-                    Once you have an account, <a href="https://app.browsermobility.com/integrations/datadog" target="_blank">go to
+                    Once you have an account, <a href="https://app.browsermobility.com/integrations/datadog"
+                        target="_blank">go to
                         the Datadog integration</a> and configure your Datadog API key.
                     Your API key is stored in an industry-leading secrets management system, ensuring your api keys
                     will never be exposed or compromised.
@@ -79,7 +82,8 @@
                     NOTE: You must have at least one available simualtor for each configuration you choose to run your
                     synthetics against.
 
-                    You can <a href="'/documentation/cli.html" target="_blank">use the Gluon CLI</a> to create simulators that match the
+                    You can <a href="/docs/command-line/cli.html" target="_blank">use the Gluon CLI</a> to create
+                    simulators that match the
                     configuration you want to use.
                 </p>
             </div>
@@ -87,11 +91,14 @@
             <div class="documentation-content">
                 <h2>Triggering the Integration</h2>
                 <p>
-                   The integration can be triggered <a href="'/documentation/cli.html" target="_blank">from the Gluon CLI</a>, making it easy to integrate into your CI/CD process, or run on-demand.
+                    The integration can be triggered <a href="/docs/command-line/cli.html" target="_blank">from the Gluon
+                        CLI</a>, making it easy to integrate into your CI/CD process, or run on-demand.
                 </p>
                 <p>
-                    Once you have your Datadog integration configured, simply call `gluon-cli run-datadog-integrations` to execute the integration.  
-                    The results will be returned to the CLI directly, and will also be available by viewing your  <a href="'https://app.browsermobility.com/test-results">Test Results.</a> 
+                    Once you have your Datadog integration configured, simply call `gluon-cli run-datadog-integrations`
+                    to execute the integration.
+                    The results will be returned to the CLI directly, and will also be available by viewing your <a
+                        href="'https://app.browsermobility.com/test-results">Test Results.</a>
                 </p>
             </div>
 
@@ -100,6 +107,10 @@
                     If you have any issues setting up your account, <a href="/support">Contact us Here</a> for support.
                 </p>
             </div>
+
+        </div>
+
+        <div class="integrations-content">
             <div class="footer">
                 <div class="footer-menu">
                     <ul>
