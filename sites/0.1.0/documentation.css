@@ -57,6 +57,13 @@
     font-size: 1em;
 }
 
+
+.documentation-content .command-item h4{
+    display:inline-block;
+
+    margin:0;
+}
+
 .documentation-content .command-item li{
     font-size: 1em;
 }

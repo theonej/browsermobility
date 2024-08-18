@@ -77,17 +77,17 @@
                 <ul>
                     <li><a href="#account-info">account-info</a></li>
                     <li><a href='#hosts'>hosts</a></li>
-                    <li>host-simulators</li>
-                    <li>available-simulators</li>
-                    <li>create-simulator</li>
-                    <li>delete-simulator</li>
-                    <li>host-logs</li>
-                    <li>host-runtimes</li>
-                    <li>account-sessions</li>
-                    <li>session-video-url</li>
-                    <li>povision-host</li>
-                    <li>set-credentials</li>
-                    <li>run-sample-test</li>
+                    <li><a href='#host-simulators'>host-simulators</a></li>
+                    <li><a href='#available-simulators'>available-simulators</a></li>
+                    <li><a href='#create-simulator'>create-simulator</a></li>
+                    <li><a href='#delete-simulator'>delete-simulator</a></li>
+                    <li><a href='#host-logs'>host-logs</a></li>
+                    <li><a href='#host-runtimes'>host-runtimes</a></li>
+                    <li><a href='#account-sessions'>account-sessions</a></li>
+                    <li><a href='#session-video-url'>session-video-url</a></li>
+                    <li><a href='#provision-host'>provision-host</a></li>
+                    <li><a href='#set-credentials'>set-credentials</a></li>
+                    <li><a href='#run-sample-test'>run-sample-test</a></li>
                 </ul>
 
                 <div class="command-item">
@@ -154,7 +154,260 @@
                     </div>
                     </p>
                 </div>
+
+                <div class="command-item">
+
+                    <p>
+                    <h3><a id="host-simulators">host-simulators</a></h3>
+                    <p>
+                    <h4>Input argument</h4>: hostId</p>
+                    <div>
+                        Retrieves the list of all simulators that are registered to the account. The simulator
+                        information is
+                        returned in json format with the following fields:
+                        <pre>
+                                {
+                                    id,
+                                    accountId,
+                                    hostId,
+                                    name,
+                                    runtime,
+                                    dataPath,
+                                    dataPathSize,
+                                    logPath,
+                                    logPathSize,
+                                    isAvailable,
+                                    lockId,
+                                    deviceTypeIdentifier,
+                                    state,
+                                    currentSessionId,
+                                    webDriverPort,
+                                    created,
+                                    updated
+                                }
+                        </pre>
+
+                    </div>
+                    </p>
+                </div>
+
+                <div class="command-item">
+
+                    <p>
+                    <h3><a id="available-simulators">available-simulators</a></h3>
+                    <p>
+                    <div>
+                        Retrieves the list of all simulators that are not currently in use. The simulator
+                        information is
+                        returned in json format with the following fields:
+                        <pre>
+                                {
+                                    id,
+                                    accountId,
+                                    hostId,
+                                    name,
+                                    runtime,
+                                    dataPath,
+                                    dataPathSize,
+                                    logPath,
+                                    logPathSize,
+                                    isAvailable,
+                                    lockId,
+                                    deviceTypeIdentifier,
+                                    state,
+                                    currentSessionId,
+                                    webDriverPort,
+                                    created,
+                                    updated
+                                }
+                        </pre>
+
+                    </div>
+                    </p>
+                </div>
+
+                <div class="command-item">
+
+                    <p>
+                    <h3><a id="create-simulator">create-simulator</a></h3>
+                    <p>
+                    <h4>Input argument</h4>: hostId</p>
+                    <p>
+                    <h4>Input argument</h4>: name</p>
+                    <p>
+                    <h4>Input argument</h4>: deviceType</p>
+                    <p>
+                    <h4>Input argument</h4>: runtime</p>
+                    <p>
+                    <h4>Input argument</h4>: webDriverPort</p>
+                    <p>
+                    <div>
+                        Creates a new simulator on the specified host.
+                        <p>
+                            The runtime and deviceType options can be retrieved using the <a
+                                href="#host-runtimes">host-runtimes</a> command.
+                        </p>
+
+                    </div>
+                    </p>
+                </div>
+
+                <div class="command-item">
+
+                    <p>
+                    <h3><a id="delete-simulator">delete-simulator</a></h3>
+                    <p>
+                    <h4>Input argument</h4>: hostId</p>
+                    <p>
+                    <h4>Input argument</h4>: simulatorId</p>
+                    <p>
+                    <div>
+                        Deletes the specified simulator from the specified host.
+                    </div>
+                    </p>
+                </div>
+
+                <div class="command-item">
+
+                    <p>
+                    <h3><a id="host-logs">host-logs</a></h3>
+                    <p>
+                    <h4>Input argument</h4>: hostId</p>
+                    </p>
+
+                    <p>
+                    <div>
+                        Retrieves the gluon host agent logs from the specified host.
+                    </div>
+                    </p>
+                </div>
+
+                <div class="command-item">
+
+                    <p>
+                    <h3><a id="host-runtimes">host-runtimes</a></h3>
+                    <p>
+                    <h4>Input argument</h4>: hostId</p>
+
+                    <p>
+                    <div>
+                        Retrieves the installed iOS runtimes from the specified host.
+
+                        The supported device types for each runtine are returned as children of each runtime, in the
+                        following structure:
+                        <pre>
+                            [runtime]
+                            =================
+                            name
+                            identifier
+                            version
+                            supported devices:
+                                [device type]
+                                =================
+                                name
+                                identifier
+                                product
+                        </pre>
+                    </div>
+                    </p>
+                </div>
+
+
+                <div class="command-item">
+
+                    <p>
+                    <h3><a id="account-sessions">account-sessions</a></h3>
+                    <div>
+                        Retrieves a list of sessions for the account. The session information is
+                        returned in json format with the following fields:
+                        <pre>
+                            {
+                                sessionId,
+                                accountId,
+                                sessionRecordingUri,
+                                sessionStartTime,
+                                sessionEndTime
+                            }
+                    </pre>
+
+                        The session recording URI cannot be accessed directly. Make a call to the
+                        <code>session-video-url</code> command to get a one-time uri that will allow you to view the
+                        video
+                        of the session.
+                    </div>
+                    </p>
+                </div>
+
+                <div class="command-item">
+
+                    <p>
+                    <h3><a id="session-video-url">session-video-url</a></h3>
+                    <p>
+                    <h4>Input argument</h4>: sessionId</p>
+
+                    <p>
+                    <div>
+                        Retrieves a one-time signed URL that can be used to view a session video.
+
+                        The url will expire after 30 minutes.
+                    </div>
+                    </p>
+                </div>
+
+                <div class="command-item">
+
+                    <p>
+                    <h3><a id="provision-host">provision-host</a></h3>
+                    <p>
+                    <h4>Input argument</h4>: ipAddress</p>
+                    <p>
+                    <h4>Input argument</h4>: agentPort</p>
+                    <p>
+                    <h4>Input argument</h4>: commandPort</p>
+                    <p>
+                    <h4>Input argument</h4>: maxSimulatorCount</p>
+                    <p>
+                    <h4>Input argument</h4>: sshUserName</p>
+                    <p>
+                    <p>
+                    <h4>Input argument</h4>: sshPassword</p>
+                    <p>
+                    <div>
+                        Provisions a new host, using the supplied credentials. 
+                        <p>
+                            For AWS host provisioning, see the <a href='/docs/integrations/aws.html'>AWS integration guide.</a>
+                        </p>
+                    </div>
+                    </p>
+                </div>
+
+                <div class="command-item">
+
+                    <p>
+                    <h3><a id="set-credentials">set-credentials</a></h3>
+                    <p>
+                    <h4>Input argument</h4>: Gluon API key</p>
+                    </p>
+
+                    <p>
+                    <div>
+                        Sets the gluon api credentials ont he local machine.
+                    </div>
+                    </p>
+                </div>
+
+                <div class="command-item">
+
+                    <p>
+                    <h3><a id="run-sample-test">run-sample-test</a></h3>
+                    <div>
+                        Runs a sample test against your provisioned capacity to ensure everything is working correctly.
+                    </div>
+                    </p>
+                </div>
+
             </div>
+
 
         </div>
 
