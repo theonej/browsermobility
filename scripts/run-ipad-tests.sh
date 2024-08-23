@@ -1,0 +1,1 @@
+node ./__tests__/e2e/ipad-tests.js
