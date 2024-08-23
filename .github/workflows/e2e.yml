@@ -16,19 +16,15 @@ jobs:
     steps:
       - uses: actions/checkout@main
 
-      - name: Install packages
-        run: npm i;
-        working-directory: ${{env.WORKING_DIRECTORY}}
-
       - name: Install gluon-cli
-        run: npm i -g @jhenrycode/gluon-cli
+        run: npm i @jhenrycode/gluon-cli
         working-directory: ${{env.WORKING_DIRECTORY}}
 
       - name: Ensure 5 iPhones on 17.2 are Provisioned
-        run: gluon-cli ensure-capacity 17-2 iPhone-15-Pro-Max 5
+        run: gluon-cli ensure-capacity 17-4 iPhone-15 2
     
       - name: Ensure 2 iPads on 17.5 are Provisioned
-        run: gluon-cli ensure-capacity 17-2 iPad-Pro-13-inch-M4-16GB 2
+        run: gluon-cli ensure-capacity 17-4 iPad-Pro-13-inch-M4-8GB 1
     
       - name: Run iPhone tests
         run: ./scripts/run-iphone-tests.sh
