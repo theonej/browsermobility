@@ -35,4 +35,4 @@ jobs:
         run: ./scripts/run-iphone-tests.sh
 
       - name: Run iPad tests
-        run: ./scripts/run-ipad-tests.sh
+        run: ./scripts/run-iphone-pro-max-tests.sh
