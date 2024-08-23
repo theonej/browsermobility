@@ -9,6 +9,8 @@ jobs:
   build:
     name: e2e Test Stage
     runs-on: ubuntu-latest
+    environment: e2e
+
     env:
         WORKING_DIRECTORY: . 
         GLUON_API_KEY: ${{ secrets.GLUON_API_KEY }}
@@ -16,9 +18,6 @@ jobs:
     steps:
       - uses: actions/checkout@main
 
-      - name: Echo env settings
-        run: echo $GLUON_API_KEY
-        
       - name: Install gluon-cli
         run: npm i -g @jhenrycode/gluon-cli
         working-directory: ${{env.WORKING_DIRECTORY}}
