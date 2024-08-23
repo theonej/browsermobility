@@ -20,16 +20,16 @@ jobs:
 
       - name: Install Packages
         run: npm i
-        
+
       - name: Install gluon-cli
         run: npm i -g @jhenrycode/gluon-cli
         working-directory: ${{env.WORKING_DIRECTORY}}
 
       - name: Ensure 5 iPhones on 17.2 are Provisioned
-        run: gluon-cli ensure-capacity 17-4 iPhone-15 2
+        run: gluon-cli ensure-capacity 17-2 iPhone-15 2
     
       - name: Ensure 2 iPads on 17.5 are Provisioned
-        run: gluon-cli ensure-capacity 17-4 iPad-Pro-13-inch-M4-8GB 1
+        run: gluon-cli ensure-capacity 17-2 iPhone-15-Pro-Max 2
     
       - name: Run iPhone tests
         run: ./scripts/run-iphone-tests.sh
