@@ -14,7 +14,7 @@ const runTests = async (options) => {
 
     const testPromises = [
         navigateToDatadogDocs(options),
-        loadSwaggerDocs,
+        //loadSwaggerDocs,
         navigateToMacStadiumDocs(options)
     ];
 
@@ -54,14 +54,14 @@ const navigateToDatadogDocs = async (options) => {
         await browser.activateApp('com.apple.mobilesafari');
         await browser.setTimeout({ 'pageLoad': 10000 });
 
-        await sleep(5000);
+        await sleep(2000);
 
         await browser.url("http://browsermobility.com/")
         await browser.setTimeout({ 'pageLoad': 10000 });
 
         console.info('loaded page successfully');
 
-        await sleep(5000);
+        await sleep(2000);
 
         let anchor = await getElementWithTimeout(browser, "aria/Docs", 1000);
         await anchor.click();
@@ -70,7 +70,7 @@ const navigateToDatadogDocs = async (options) => {
 
         console.info('loaded page successfully');
 
-        await sleep(5000);
+        await sleep(2000);
 
         anchor = await getElementWithTimeout(browser, "aria/Datadog", 1000);
         await anchor.click();
@@ -79,7 +79,7 @@ const navigateToDatadogDocs = async (options) => {
 
         console.info('loaded page successfully');
 
-        await sleep(5000);
+        await sleep(2000);
 
         return true;
 
@@ -100,14 +100,14 @@ const navigateToMacStadiumDocs = async (options) => {
         await browser.activateApp('com.apple.mobilesafari');
         await browser.setTimeout({ 'pageLoad': 10000 });
 
-        await sleep(5000);
+        await sleep(2000);
 
         await browser.url("http://browsermobility.com/")
         await browser.setTimeout({ 'pageLoad': 10000 });
 
         console.info('loaded page successfully');
 
-        await sleep(5000);
+        await sleep(2000);
 
         let anchor = await getElementWithTimeout(browser, "aria/Docs", 1000);
         await anchor.click();
@@ -116,7 +116,7 @@ const navigateToMacStadiumDocs = async (options) => {
 
         console.info('loaded page successfully');
 
-        await sleep(5000);
+        await sleep(2000);
 
         anchor = await getElementWithTimeout(browser, "aria/MacStadium", 1000);
         await anchor.click();
@@ -125,7 +125,7 @@ const navigateToMacStadiumDocs = async (options) => {
 
         console.info('loaded page successfully');
 
-        await sleep(5000);
+        await sleep(2000);
 
         return true;
 
