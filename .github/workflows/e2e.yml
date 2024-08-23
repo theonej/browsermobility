@@ -18,6 +18,9 @@ jobs:
     steps:
       - uses: actions/checkout@main
 
+      - name: Install Packages
+        run: npm i
+        
       - name: Install gluon-cli
         run: npm i -g @jhenrycode/gluon-cli
         working-directory: ${{env.WORKING_DIRECTORY}}
