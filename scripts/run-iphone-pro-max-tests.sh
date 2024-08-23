@@ -1,1 +1,0 @@
-node ./__tests__/e2e/iphone-pro-max-tests.js
