@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@main
 
       - name: Install gluon-cli
-        run: npm i @jhenrycode/gluon-cli
+        run: npm i -g @jhenrycode/gluon-cli
         working-directory: ${{env.WORKING_DIRECTORY}}
 
       - name: Ensure 5 iPhones on 17.2 are Provisioned
