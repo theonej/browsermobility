@@ -13,7 +13,7 @@ const capabilities = {
 };
 
 const options = {
-    hostname: 'api.browsermobility.com',
+    hostname: 'api.gluontest.com',
     protocol: 'https',
     port: 443,
     logLevel: 'silent',
