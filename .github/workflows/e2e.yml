@@ -27,10 +27,10 @@ jobs:
         run: npm i -g @jhenrycode/gluon-cli
         working-directory: ${{env.WORKING_DIRECTORY}}
 
-      - name: Ensure 5 iPhones on 17.2 are Provisioned
+      - name: Ensure 2 iPhones on 17.2 are Provisioned
         run: gluon-cli ensure-capacity 17-2 iPhone-15 2
     
-      - name: Ensure 2 iPads on 17.5 are Provisioned
+      - name: Ensure 2 iPhone Pro Max on 17.5 are Provisioned
         run: gluon-cli ensure-capacity 17-2 iPhone-15-Pro-Max 2
     
       - name: Run iPhone tests
