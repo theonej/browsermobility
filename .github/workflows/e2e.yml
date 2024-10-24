@@ -28,10 +28,10 @@ jobs:
         working-directory: ${{env.WORKING_DIRECTORY}}
 
       - name: Ensure 2 iPhones on 16.4 are Provisioned
-        run: gluon-cli ensure-capacity 16-4 iPhone-14 4
+        run: gluon-cli ensure-capacity 16-4 iPhone-14 2
     
-      - name: Ensure 2 iPhone Pro Max on 17.5 are Provisioned
-        run: gluon-cli ensure-capacity 17-2 iPhone-15-Pro-Max 2
+      - name: Ensure 2 iPhone Pro Max on 16.4 are Provisioned
+        run: gluon-cli ensure-capacity 16-4 iPhone-14-Plus 2
     
       - name: Run iPhone tests
         run: ./scripts/run-iphone-tests.sh
