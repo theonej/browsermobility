@@ -5,8 +5,8 @@ const API_KEY = process.env.GLUON_API_KEY;
 const capabilities = {
     'platformName': 'iOS',
     'appium:automationName': 'XCUITest',
-    'appium:deviceName': 'com.apple.CoreSimulator.SimDeviceType.iPhone-14-Plus',
-    'appium:platformVersion': 'com.apple.CoreSimulator.SimRuntime.iOS-16-4',
+    'appium:deviceName': 'com.apple.CoreSimulator.SimDeviceType.iPhone-15-Pro-Max',
+    'appium:platformVersion': 'com.apple.CoreSimulator.SimRuntime.iOS-17-4',
     "appium:connectionRetryTimeout": 600000,
     'browserName': 'Safari',
     'gluon:gluonApiKey': API_KEY
